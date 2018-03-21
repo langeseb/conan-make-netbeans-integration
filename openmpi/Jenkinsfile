@@ -1,0 +1,24 @@
+def artifactory_name = "-411322978@1423589480433"
+def artifactory_repo = "conan-libs-snapshot"
+#def repo_url = 'http://stash01.dev.sarah/scm/rdk/openmpi.git'
+#def repo_branch = "master"
+
+node('hpc01') {
+    def server = Artifactory.server artifactory_name
+    def client = Artifactory.newConanClient()
+    def serverName = client.remote.add server: server, repo: artifactory_repo
+
+#    stage("Get recipe"){
+#        git branch: repo_branch, url: repo_url
+#    }
+
+    stage("Test recipe"){
+        client.run(command: "create rdk/stable")
+    }
+
+    stage("Upload packages"){
+        String command = "upload * --all -r ${serverName} --confirm"
+        def b = client.run(command: command)
+        server.publishBuildInfo b
+    }
+}

@@ -1,0 +1,35 @@
+[settings]
+    arch=x86_64
+    build_type=Release
+    compiler=gcc
+    compiler.libcxx=libstdc++
+    compiler.version=4.8
+    os=Linux
+
+[requires]
+    openmpi/3.Y.Z
+
+[options]
+
+
+[full_settings]
+    arch=x86_64
+    arch_build=x86_64
+    build_type=Release
+    compiler=gcc
+    compiler.libcxx=libstdc++
+    compiler.version=4.8
+    os=Linux
+    os_build=Linux
+
+[full_requires]
+    openmpi/3.0.0@jenkins/stable:4f7d6d5032b1a188f98e0c149ef6bf91e76af63e
+
+[full_options]
+    openmpi:shared=True
+
+[recipe_hash]
+
+
+[env]
+

@@ -1,0 +1,5 @@
+[requires]
+openmpi/3.0.0@jenkins/stable
+
+[generators]
+compiler_args

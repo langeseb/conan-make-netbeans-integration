@@ -1,0 +1,14 @@
+/conan-mpi-hw/build/
+/conan-mpi-hw/deps/
+/conan-mpi-hw/dist/
+/conan-mpi-hw/html/
+/conan-mpi-hw/LATEST_ARTIFACT/
+/conan-mpi-hw/latex/
+/conan-mpi-hw/nbproject/private/
+/conan-mpi-hw/RELEASE_ARTIFACT/
+/conan-mpi-hw/reports/*
+/conan-mpi-hw/log.txt
+/conan-mpi-hw/*~
+/conan-mpi-hw/*.swp
+/openmpi/test_package/build
+
